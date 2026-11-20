@@ -1,0 +1,49 @@
+
+{% extends 'base.html' %}
+
+{% block title %}Customer Dashboard | BreakPoint{% endblock %}
+
+{% block content %}
+
+<section class="dashboard-section">
+
+    <p class="small-heading">CUSTOMER DASHBOARD</p>
+
+    <h1>Welcome, {{ user.first_name }}!</h1>
+
+    <p>
+        Your BreakPoint gaming account is ready.
+    </p>
+
+    <div class="dashboard-cards">
+
+        <div class="feature-card">
+            <div class="feature-icon">🎱</div>
+            <h3>Play Snooker</h3>
+            <p>Enjoy our upcoming offline 3D snooker game.</p>
+        </div>
+
+        <div class="feature-card">
+            <div class="feature-icon">📅</div>
+            <h3>Book a Table</h3>
+            <p>Reserve your preferred snooker table.</p>
+        </div>
+
+        <div class="feature-card">
+            <div class="feature-icon">👤</div>
+            <h3>My Account</h3>
+            <p>{{ user.email }}</p>
+        </div>
+
+    </div>
+
+    <form method="POST" action="{% url 'logout' %}">
+        {% csrf_token %}
+        <button type="submit" class="auth-submit logout-btn">
+            LOGOUT
+        </button>
+    </form>
+
+</section>
+
+{% endblock %}

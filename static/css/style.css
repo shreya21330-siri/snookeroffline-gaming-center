@@ -1,0 +1,391 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #090b09;
+    color: white;
+    font-family: Arial, sans-serif;
+}
+
+.navbar {
+    min-height: 85px;
+    padding: 20px 7%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #101310;
+    border-bottom: 1px solid #343020;
+}
+
+.logo {
+    font-size: 25px;
+    font-weight: 900;
+    color: white;
+    text-decoration: none;
+    letter-spacing: 2px;
+}
+
+.logo span, footer span {
+    color: #d6ad51;
+}
+
+nav {
+    display: flex;
+    gap: 30px;
+}
+
+nav a {
+    color: #ddd;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+nav a:hover {
+    color: #e2bb62;
+}
+
+.nav-buttons {
+    display: flex;
+    gap: 12px;
+}
+
+.login-btn, .register-btn, .gold-btn, .outline-btn {
+    padding: 12px 22px;
+    text-decoration: none;
+    display: inline-block;
+    font-weight: bold;
+    border-radius: 4px;
+}
+
+.login-btn {
+    color: white;
+    border: 1px solid #d6ad51;
+}
+
+.register-btn, .gold-btn {
+    background: #d6ad51;
+    color: #111;
+}
+
+.hero {
+    min-height: 570px;
+    padding: 100px 9%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background:
+        radial-gradient(ellipse at 75% 45%, #25432d 0%, transparent 42%),
+        linear-gradient(110deg, #090b09, #101b12);
+}
+
+.hero-content {
+    max-width: 650px;
+}
+
+.small-heading {
+    color: #d6ad51;
+    letter-spacing: 4px;
+    font-size: 12px;
+    font-weight: bold;
+    margin-bottom: 22px;
+}
+
+.hero h1 {
+    font-size: clamp(42px, 6vw, 75px);
+    line-height: 1.1;
+    margin-bottom: 25px;
+}
+
+.hero h1 span {
+    color: #d6ad51;
+}
+
+.hero-description {
+    color: #bbb;
+    font-size: 17px;
+    line-height: 1.8;
+    max-width: 480px;
+    margin-bottom: 35px;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.outline-btn {
+    color: white;
+    border: 1px solid #d6ad51;
+}
+
+.hero-decoration {
+    width: 300px;
+    height: 300px;
+    position: relative;
+    border: 2px solid #b89548;
+    border-radius: 50%;
+    background: radial-gradient(circle, #265b34, #0b2012 70%);
+    box-shadow: 0 0 70px #345c36;
+}
+
+.ball {
+    width: 65px;
+    height: 65px;
+    position: absolute;
+    display: grid;
+    place-items: center;
+    border-radius: 50%;
+    color: white;
+    font-weight: bold;
+    font-size: 22px;
+    box-shadow: inset -8px -8px 12px #0008;
+}
+
+.ball-one {
+    background: #111;
+    top: 60px;
+    left: 55px;
+}
+
+.ball-two {
+    background: #c9342d;
+    top: 150px;
+    left: 145px;
+}
+
+.ball-three {
+    background: #edc62c;
+    top: 45px;
+    right: 35px;
+}
+
+.features, .game-section, .booking-section {
+    text-align: center;
+    padding: 85px 8%;
+}
+
+.features h2, .game-section h2, .booking-section h2 {
+    font-size: 34px;
+    margin-bottom: 35px;
+}
+
+.feature-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    margin-top: 45px;
+}
+
+.feature-card {
+    background: #151a15;
+    padding: 40px 25px;
+    border: 1px solid #353325;
+    border-radius: 8px;
+}
+
+.feature-icon {
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+
+.feature-card h3 {
+    color: #e1bb62;
+    margin-bottom: 15px;
+}
+
+.feature-card p, .game-section p, .booking-section p {
+    color: #aaa;
+    line-height: 1.7;
+    margin-bottom: 25px;
+}
+
+.game-section {
+    background: #111811;
+}
+
+.booking-section {
+    background: #0b0e0b;
+}
+
+footer {
+    padding: 40px 20px;
+    background: #101310;
+    text-align: center;
+    border-top: 1px solid #343020;
+}
+
+footer h2 {
+    margin-bottom: 12px;
+}
+
+footer p {
+    color: #999;
+    margin-top: 10px;
+}
+
+@media (max-width: 800px) {
+    .navbar {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    nav {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .hero {
+        text-align: center;
+        flex-direction: column;
+        gap: 50px;
+    }
+
+    .hero-buttons {
+        justify-content: center;
+    }
+
+    .hero-decoration {
+        width: 230px;
+        height: 230px;
+    }
+
+    .feature-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* CUSTOMER REGISTRATION AND LOGIN */
+
+.auth-section {
+    min-height: 85vh;
+    padding: 70px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #090b09;
+}
+
+.auth-card {
+    width: 100%;
+    max-width: 520px;
+    padding: 40px;
+    background: #151a15;
+    border: 1px solid #b89548;
+    border-radius: 10px;
+}
+
+.auth-card h1 {
+    font-size: 30px;
+    margin-bottom: 15px;
+}
+
+.auth-description {
+    color: #aaa;
+    margin-bottom: 30px;
+    line-height: 1.6;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    color: #e2bb62;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 13px;
+    background: #090b09;
+    border: 1px solid #555;
+    border-radius: 5px;
+    color: white;
+    outline: none;
+}
+
+.form-group input:focus {
+    border-color: #d6ad51;
+}
+
+.auth-submit {
+    width: 100%;
+    padding: 15px;
+    margin-top: 15px;
+    background: #d6ad51;
+    color: #111;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.auth-submit:hover {
+    background: #f0ca70;
+}
+
+.auth-switch {
+    text-align: center;
+    margin-top: 25px;
+    color: #aaa;
+}
+
+.auth-switch a {
+    color: #d6ad51;
+    text-decoration: none;
+}
+
+.errorlist {
+    color: #ff7777;
+    font-size: 13px;
+    margin: 8px 0;
+    list-style: none;
+}
+
+.dashboard-section {
+    min-height: 75vh;
+    padding: 80px 8%;
+    text-align: center;
+}
+
+.dashboard-section h1 {
+    margin-bottom: 15px;
+    font-size: 38px;
+}
+
+.dashboard-section > p {
+    color: #aaa;
+    margin-bottom: 35px;
+}
+
+.dashboard-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    margin: 40px 0;
+}
+
+.logout-btn {
+    max-width: 200px;
+}
+
+@media (max-width: 700px) {
+    .auth-card {
+        padding: 25px;
+    }
+
+    .dashboard-cards {
+        grid-template-columns: 1fr;
+    }
+}
+

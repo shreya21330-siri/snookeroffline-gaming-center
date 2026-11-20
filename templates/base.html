@@ -1,0 +1,38 @@
+
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}BreakPoint Snooker Club{% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+
+<header class="navbar">
+    <a href="/" class="logo">BREAK<span>POINT</span></a>
+
+    <nav>
+        <a href="/">Home</a>
+        <a href="#about">About</a>
+        <a href="#games">Games</a>
+        <a href="#booking">Booking</a>
+    </nav>
+
+    <div class="nav-buttons">
+        <a href="#login" class="login-btn">Login</a>
+        <a href="#register" class="register-btn">Join Now</a>
+    </div>
+</header>
+
+{% block content %}{% endblock %}
+
+<footer>
+    <h2>BREAK<span>POINT</span></h2>
+    <p>Play. Compete. Conquer.</p>
+    <p>© 2026 BreakPoint Snooker Gaming Center</p>
+</footer>
+
+</body>
+</html>
